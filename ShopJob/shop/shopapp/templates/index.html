@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Магазин Хобби и Творчества</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f5f5f5;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: rgba(139, 69, 19, 0.8); /* Прозрачный коричневый цвет */
+      color: #fff;
+      padding: 20px;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    .navbar {
+      background-color: transparent;
+    }
+
+    .navbar-brand {
+      color: #fff;
+      font-size: 24px;
+      font-weight: bold;
+      margin-left: -15px; /* Левое смещение заголовка */
+    }
+
+    .navbar-nav {
+      margin-left: auto;
+    }
+
+    .navbar-nav a {
+      color: #fff;
+      margin: 0 10px;
+    }
+
+    .categories {
+      background-color: #f5f5f5;
+      padding: 20px;
+    }
+
+    .category-title {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .all-categories {
+      color: #666;
+      font-size: 14px;
+      float: right;
+      cursor: pointer;
+    }
+
+    .category-cubes {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .category-cube {
+      width: calc(25% - 20px);
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 15px;
+      margin: 10px;
+      transition: transform 0.3s ease-in-out;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden; /* Добавлено для изображения, прикрепленного к низу */
+    }
+
+    .category-cube img {
+      width: 100%;
+      object-fit: cover;
+      border-radius: 5px;
+      margin-top: auto; /* Прикрепление к низу */
+      transition: transform 0.3s ease-in-out; /* Добавлено для увеличения при наведении */
+    }
+
+    .category-cube p {
+      margin-top: 10px;
+      color: #000;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .category-cube:hover {
+      transform: scale(1.05); /* Увеличение при наведении */
+    }
+
+    footer {
+      background-color: rgba(139, 69, 19, 0.8); /* Прозрачный коричневый цвет */
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h1>Магазин Хобби и Творчества</h1>
+        </div>
+        <div class="col-md-6">
+          <nav class="navbar navbar-expand-md navbar-dark">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">HOME</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">ABOUT</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">SHOP</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">CONTACT US</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="categories">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="category-title">Популярные товары</div>
+        </div>
+        <div class="col-md-6">
+          <div class="all-categories" onclick="location.href='#';">Все категории</div>
+        </div>
+      </div>
+      <div class="category-cubes">
+        <div class="category-cube">
+          <p>Товары для художников</p>
+          <img src="https://leonardo.ru/src/assets/popularpart/painting_1.png" alt="Товары для художников">
+        </div>
+        <div class="category-cube">
+          <p>Хобби и творчество</p>
+          <img src="https://leonardo.ru/src/assets/popularpart/hobby.png" alt="Хобби и творчество">
+        </div>
+        <div class="category-cube">
+          <p>Шитье</p>
+          <img src="https://leonardo.ru/src/assets/popularpart/sewing.png" alt="Шитье">
+        </div>
+        <div class="category-cube">
+          <p>Бисероплетение</p>
+          <img src="https://leonardo.ru/src/assets/popularpart/biser_1.png" style="image-rendering: pixelated;" alt="Бисероплетение">
+        </div>
+        <div class="category-cube">
+          <p>Вязание</p>
+          <img src="https://leonardo.ru/src/assets/popularpart/knitting_popular.png" alt="Вязание">
+        </div>
+        <div class="category-cube">
+          <p>Канцтовары</p>
+          <img src="https://leonardo.ru/src/assets/popularpart/kanz_popular.png" alt="Канцтовары">
+        </div>
+        <div class="category-cube">
+          <p>Декорирование</p>
+          <img src="https://leonardo.ru/src/assets/popularpart/decor.png" alt="Декорирование">
+        </div>
+        <div class="category-cube">
+          <p>Игры и игрушки</p>
+          <img src="https://leonardo.ru/src/assets/popularpart/games_1.png" alt="Игры и игрушки">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- Временно убраны товары -->
+  </main>
+
+  <footer style="background-color: rgba(139, 69, 19, 0.8); color: #fff; padding: 20px; text-align: center;">
+    <p>Свяжитесь с нами: example@email.com | Телефон: +7 (123) 456-7890</p>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
